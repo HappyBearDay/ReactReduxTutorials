@@ -2,18 +2,20 @@ import { FETCH_USERS_REQUEST, FETCH_USERS_SUCCESS, FETCH_USERS_FAILURE } from ".
 
 export const fetchUsersRequest = () => {
     return {
-        type : FETCH_USERS_REQUEST
+      type: FETCH_USERS_REQUEST
     }
-}
-
-export const fetchUsersSuccess = () => {
+  }
+  
+  export const fetchUsersSuccess = users => {
     return {
-        type : FETCH_USERS_SUCCESS
+      type: FETCH_USERS_SUCCESS,
+      payload: users
     }
-}
-
-export const fetchUsersFailure = () => {
+  }
+  
+  export const fetchUsersFailure = error => {
     return {
-        type : FETCH_USERS_FAILURE
+      type: FETCH_USERS_FAILURE,
+      payload: error
     }
-}
+  }

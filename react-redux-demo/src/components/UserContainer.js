@@ -7,3 +7,5 @@ function UserContainer(){
         </div>
     )
 }
+
+export default UserContainer
